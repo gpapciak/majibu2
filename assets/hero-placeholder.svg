@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1B3A2D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#254d3c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#g)"/>
+  <text x="960" y="500" font-family="Georgia, serif" font-size="48" fill="rgba(255,255,255,0.15)" text-anchor="middle">
+    hero.jpg — replace with a high-quality photo of East Africa
+  </text>
+  <text x="960" y="570" font-family="Georgia, serif" font-size="28" fill="rgba(200,137,42,0.4)" text-anchor="middle">
+    Recommended: landscape community / nature photo, 1920×1080px minimum
+  </text>
+</svg>
