@@ -48,14 +48,14 @@
          ============================================================ -->
     <section class="section model-framework" id="framework">
       <div class="container">
-        <span class="section-label">The framework</span>
-        <h2>Three interconnected commitments</h2>
+        <span class="section-label reveal">The framework</span>
+        <h2 class="reveal">Three interconnected commitments</h2>
         <p style="max-width:620px; color:var(--text-muted); margin-top:0.5rem; font-size:0.95rem;">Each element of the Majibu model reinforces the others. We don't simply disburse grants — we build long-term relationships with organisations that have the potential to become enduring pillars of their communities.</p>
 
         <div class="framework-steps">
 
           <!-- INVEST -->
-          <div class="framework-step" id="invest">
+          <div class="framework-step reveal" id="invest">
             <div class="step-number">01</div>
             <div class="step-body">
               <h3>
@@ -74,7 +74,7 @@
           </div>
 
           <!-- STRENGTHEN -->
-          <div class="framework-step" id="strengthen">
+          <div class="framework-step reveal" id="strengthen">
             <div class="step-number">02</div>
             <div class="step-body">
               <h3>
@@ -94,7 +94,7 @@
           </div>
 
           <!-- MANAGE -->
-          <div class="framework-step" id="manage">
+          <div class="framework-step reveal" id="manage">
             <div class="step-number">03</div>
             <div class="step-body">
               <h3>
@@ -130,26 +130,144 @@
     </div>
 
     <!-- ============================================================
+         FUNDING FLOW VISUALISER
+         ============================================================ -->
+    <section class="section flow-section" id="funding-flow">
+      <div class="container">
+        <span class="section-label reveal">The evidence</span>
+        <h2 class="reveal">Where does philanthropic capital actually go?</h2>
+        <p class="flow-subhead reveal">The route to local organisations matters as much as the amount invested.</p>
+
+        <div class="flow-visualiser" id="flowVisualiser">
+
+          <!-- Column 1: Large agencies -->
+          <div class="flow-col">
+            <div class="flow-col-title">Large agencies &amp; governments</div>
+            <div class="flow-bar-container">
+              <div class="flow-segment flow-seg-overhead" data-height="97">
+                <span class="flow-segment-label">97%<br>Overheads &amp; admin</span>
+              </div>
+              <div class="flow-segment flow-seg-local-sm" data-height="3">
+                <span class="flow-segment-label">3%<br>Local orgs</span>
+              </div>
+            </div>
+            <p class="flow-caption">The vast majority is absorbed before it reaches communities.</p>
+          </div>
+
+          <!-- Column 2: UK NGOs -->
+          <div class="flow-col">
+            <div class="flow-col-title">UK NGOs with international partners</div>
+            <div class="flow-bar-container">
+              <div class="flow-segment flow-seg-overhead" data-height="55">
+                <span class="flow-segment-label">55%<br>UK fundraising &amp; ops</span>
+              </div>
+              <div class="flow-segment flow-seg-project" data-height="35">
+                <span class="flow-segment-label">35%<br>Restricted project funding</span>
+              </div>
+              <div class="flow-segment flow-seg-local-sm" data-height="10">
+                <span class="flow-segment-label">10%<br>Local orgs (direct)</span>
+              </div>
+            </div>
+            <p class="flow-caption">High costs, restricted grants, limited unrestricted investment.</p>
+          </div>
+
+          <!-- Column 3: Majibu -->
+          <div class="flow-col flow-col-highlight">
+            <span class="flow-col-badge">Most direct</span>
+            <div class="flow-col-title">Majibu</div>
+            <div class="flow-bar-container">
+              <div class="flow-segment flow-seg-mgmt" data-height="11">
+                <span class="flow-segment-label">11%<br>Portfolio mgmt</span>
+              </div>
+              <div class="flow-segment flow-seg-orgdev" data-height="11">
+                <span class="flow-segment-label">11%<br>Org development</span>
+              </div>
+              <div class="flow-segment flow-seg-direct" data-height="78">
+                <span class="flow-segment-label">78%<br>Direct unrestricted grants</span>
+              </div>
+            </div>
+            <p class="flow-caption">The most direct route from philanthropist to community impact.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         IMPACT CALCULATOR
+         ============================================================ -->
+    <section class="section calc-section" id="impact-calculator">
+      <div class="container">
+        <span class="section-label reveal">Illustrative modelling</span>
+        <h2 class="reveal">Model your investment</h2>
+        <p class="calc-subhead reveal">See how your philanthropic capital would be put to work.</p>
+
+        <div class="calc-card reveal">
+          <div class="calc-inputs">
+            <div class="calc-input-group">
+              <label for="calcAmount">Investment amount</label>
+              <input type="range" id="calcAmount" class="calc-range" min="10000" max="1000000" value="50000" step="5000" aria-label="Investment amount" />
+              <div class="calc-amount-display">£<span id="calcAmountDisplay">50,000</span></div>
+            </div>
+            <div class="calc-input-group">
+              <label>Time horizon</label>
+              <div class="calc-year-tabs" role="group" aria-label="Time horizon">
+                <button class="calc-year-tab active" data-year="1">Year 1</button>
+                <button class="calc-year-tab" data-year="2">Year 2</button>
+                <button class="calc-year-tab" data-year="3">Year 3</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-outputs">
+            <div class="calc-output">
+              <div class="calc-output-value">£<span id="calcGrants">35,000</span></div>
+              <div class="calc-output-label">Direct unrestricted grants to local NGOs</div>
+              <div class="calc-output-pct"><span id="calcGrantsPct">70</span>% of total</div>
+            </div>
+            <div class="calc-output">
+              <div class="calc-output-value">£<span id="calcOrgDev">7,500</span></div>
+              <div class="calc-output-label">Organisational development support</div>
+              <div class="calc-output-pct"><span id="calcOrgDevPct">15</span>% of total</div>
+            </div>
+            <div class="calc-output">
+              <div class="calc-output-value">£<span id="calcMgmt">7,500</span></div>
+              <div class="calc-output-label">Portfolio management</div>
+              <div class="calc-output-pct"><span id="calcMgmtPct">15</span>% of total</div>
+            </div>
+            <div class="calc-output">
+              <div class="calc-output-value"><span id="calcOrgs">1</span></div>
+              <div class="calc-output-label">Partner organisations that could be supported</div>
+              <div class="calc-output-pct">est. 1 per £35,000 invested</div>
+            </div>
+          </div>
+
+          <p class="calc-disclaimer">These figures illustrate how Majibu deploys philanthropic capital based on our current model. Actual allocations are agreed with each funding partner individually.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
          PRINCIPLES
          ============================================================ -->
     <section class="section model-principles">
       <div class="container">
-        <span class="section-label">Our beliefs</span>
-        <h2>Guiding principles</h2>
+        <span class="section-label reveal">Our beliefs</span>
+        <h2 class="reveal">Guiding principles</h2>
         <div class="principles-grid">
-          <div class="principle-card">
+          <div class="principle-card reveal">
             <h4>Local leadership is non-negotiable</h4>
             <p>We do not impose structures, strategies, or staff from outside. Every organisation we support is led by people from their own communities, with deep contextual knowledge that no external actor can replicate.</p>
           </div>
-          <div class="principle-card">
+          <div class="principle-card reveal">
             <h4>Trust is the foundation of impact</h4>
             <p>Long-term, respectful relationships — between funder and intermediary, and between intermediary and partner — are what allow genuine risk-taking, honest reporting, and adaptive management. We invest in trust first.</p>
           </div>
-          <div class="principle-card">
+          <div class="principle-card reveal">
             <h4>Durability over visibility</h4>
             <p>We are not in the business of creating photogenic projects. We are building systems, institutions, and capacities that will serve communities long after any funding has ended. Our partners are building legacies.</p>
           </div>
-          <div class="principle-card">
+          <div class="principle-card reveal">
             <h4>Rigour without bureaucracy</h4>
             <p>We take evidence and accountability seriously — but we know that excessive reporting requirements drain energy from the work. We design our monitoring frameworks to be genuinely useful to partners, not just reassuring to funders.</p>
           </div>
