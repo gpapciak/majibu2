@@ -1709,3 +1709,121 @@ p:last-child { margin-bottom: 0; }
 @media (max-width: 480px) {
   .calc-outputs { grid-template-columns: 1fr; }
 }
+
+
+/* ============================================================
+   IMPACT CARD CLICK AFFORDANCE
+   ============================================================ */
+.impact-item[data-impact] {
+  cursor: pointer;
+  position: relative;
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+
+.impact-item[data-impact]::after {
+  content: '\2192';
+  position: absolute;
+  bottom: 0.9rem;
+  right: 1.1rem;
+  font-size: 0.8rem;
+  color: var(--ochre);
+  font-weight: 600;
+  opacity: 0.6;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.impact-item[data-impact]:hover {
+  border-color: var(--ochre);
+  box-shadow: 0 8px 32px rgba(27,58,45,0.13);
+  transform: translateY(-3px);
+}
+
+.impact-item[data-impact]:hover::after {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+
+/* ============================================================
+   IMPACT MODAL — content sections
+   ============================================================ */
+.modal-impact-accent {
+  width: 40px;
+  height: 3px;
+  background: var(--ochre);
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+.modal-sdg-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+}
+
+.sdg-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  background: rgba(200,137,42,0.14);
+  color: #7a5010;
+  border-radius: 100px;
+  padding: 0.3rem 0.9rem;
+  line-height: 1.2;
+}
+
+.sdg-badge-num {
+  font-family: var(--font-head);
+  font-size: 1rem;
+  color: var(--ochre);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.modal-impact-section { margin-bottom: 1.5rem; }
+
+.modal-impact-label {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ochre);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.modal-impact-section p {
+  font-size: 0.93rem;
+  color: var(--text-muted);
+  line-height: 1.78;
+  margin: 0;
+}
+
+.modal-partners-line {
+  padding: 1.25rem;
+  background: rgba(27,58,45,0.05);
+  border-radius: var(--radius);
+}
+
+.modal-partner-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.modal-partner-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--green);
+  border-bottom: 1px solid var(--ochre);
+  padding-bottom: 1px;
+  transition: color var(--transition);
+}
+
+.modal-partner-link:hover { color: var(--ochre); }

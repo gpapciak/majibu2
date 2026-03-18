@@ -188,27 +188,27 @@
         <h2 class="reveal">Impact areas</h2>
         <p style="max-width:560px; color:var(--text-muted); font-size:0.95rem; margin-top:0.5rem;">Our partners work across six interconnected domains where local leadership delivers the greatest long-term returns.</p>
         <div class="impact-grid">
-          <div class="impact-item reveal">
+          <div class="impact-item reveal" data-impact="education" role="button" tabindex="0" aria-haspopup="dialog">
             <h4>Education &amp; Youth</h4>
             <p>Supporting access to quality learning and skills development for young people in underserved communities.</p>
           </div>
-          <div class="impact-item reveal">
+          <div class="impact-item reveal" data-impact="health" role="button" tabindex="0" aria-haspopup="dialog">
             <h4>Health &amp; Wellbeing</h4>
             <p>Strengthening community health systems and increasing access to essential services.</p>
           </div>
-          <div class="impact-item reveal">
+          <div class="impact-item reveal" data-impact="livelihoods" role="button" tabindex="0" aria-haspopup="dialog">
             <h4>Livelihoods &amp; Enterprise</h4>
             <p>Building economic resilience through vocational training, microenterprise support, and market access.</p>
           </div>
-          <div class="impact-item reveal">
+          <div class="impact-item reveal" data-impact="environment" role="button" tabindex="0" aria-haspopup="dialog">
             <h4>Environment &amp; Conservation</h4>
             <p>Working with coastal and inland communities to protect natural resources and build climate resilience.</p>
           </div>
-          <div class="impact-item reveal">
+          <div class="impact-item reveal" data-impact="child-protection" role="button" tabindex="0" aria-haspopup="dialog">
             <h4>Child Protection</h4>
             <p>Reducing vulnerability, preventing exploitation, and strengthening family and community safeguarding systems.</p>
           </div>
-          <div class="impact-item reveal">
+          <div class="impact-item reveal" data-impact="digital" role="button" tabindex="0" aria-haspopup="dialog">
             <h4>Digital Inclusion</h4>
             <p>Expanding access to technology and digital literacy to unlock opportunity across all other sectors.</p>
           </div>
@@ -242,6 +242,16 @@
     </section>
 
   </main>
+
+  <!-- ============================================================
+       SITE MODAL (unified — shared across all card types)
+       ============================================================ -->
+  <div class="modal-overlay" id="siteModal" role="dialog" aria-modal="true" aria-labelledby="siteModalTitle">
+    <div class="modal-card">
+      <div id="siteModalHeader" class="modal-header"></div>
+      <div id="siteModalBody" class="modal-body"></div>
+    </div>
+  </div>
 
   <!-- ============================================================
        FOOTER
